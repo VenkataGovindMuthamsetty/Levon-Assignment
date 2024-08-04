@@ -1,0 +1,74 @@
+/* Basic styles for layout and responsiveness */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #282c34;
+  color: white;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #333;
+  color: white;
+  height: 100vh;
+  position: fixed;
+}
+
+.main {
+  margin-left: 200px;
+  padding: 1rem;
+}
+
+.footer {
+  padding: 1rem;
+  background-color: #282c34;
+  color: white;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.dashboard .widgets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.recent-activity {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body.light {
+  background-color: white;
+  color: black;
+}
+
+body.dark {
+  background-color: black;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .main {
+    margin-left: 0;
+  }
+  .footer {
+    position: relative;
+  }
+}
